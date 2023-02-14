@@ -8,5 +8,7 @@ public class BookApp {
     public static void main(String[] args) {
         BookService bookService = new BookServiceImpl();
         bookService.save();
+
+        //单application
     }
 }
