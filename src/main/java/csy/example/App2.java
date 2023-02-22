@@ -13,10 +13,10 @@ public class App2 {
         //获取IoC容器
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         //获取DAO的bean
-        BookDao bookDao = (BookDao) ctx.getBean("bookDao");
+        // BookDao bookDao = (BookDao) ctx.getBean("bookDao");
         //调用
-        bookDao.save();
-        System.out.println("=========================");
+        // bookDao.save();
+        // System.out.println("=========================");
         //获取Service的bean
         BookService bookService = (BookService) ctx.getBean("bookService");
         //调用

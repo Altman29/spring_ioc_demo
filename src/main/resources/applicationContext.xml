@@ -8,7 +8,15 @@
     <!--配置实现类，需要实例化的-->
     <!--bean标签，表示配置bean。id属性表示给bean起名字。 class表示给bean定义类型。-->
     <bean id="bookDao" class="csy.example.dao.impl.BookDaoImpl"/>
-    <bean id="bookService" class="csy.example.service.impl.BookServiceImpl"/>
+
+    <!--<bean id="bookService" class="csy.example.service.impl.BookServiceImpl"/>-->
+    <bean id="bookService" class="csy.example.service.impl.BookServiceImpl">
+        <!--step7 配置service与dao的关系 单标签改成双标签-->
+        <!--property标签表示配置当前bean的属性-->
+        <!--name属性表示配置哪一个具体的属性-->
+        <!--ref属性表示参照哪一个bean，即上面的bookDao-->
+        <property name="bookDao" ref="bookDao"/>
+    </bean>
 
 
 </beans>
